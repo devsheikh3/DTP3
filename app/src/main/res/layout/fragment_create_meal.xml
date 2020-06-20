@@ -183,13 +183,6 @@
         app:layout_constraintTop_toTopOf="@+id/guideline59" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        app:layout_constraintStart_toStartOf="@+id/guideline51"
-        tools:layout_editor_absoluteY="42dp" />
-
-    <TextView
         android:id="@+id/createmeal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -321,8 +314,8 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorPrimaryDark"
         android:src="@drawable/ic_camera_alt_black_24dp"
-        android:tint="@color/colorPrimary"
-        app:fabSize="mini"
+        android:tint="@color/colorAccent"
+        app:fabSize="auto"
         app:layout_constraintBottom_toTopOf="@+id/guideline58"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="@+id/imageView2" />
@@ -334,7 +327,7 @@
         android:layout_alignParentRight="true"
         android:backgroundTint="@color/colorPrimaryDark"
         android:src="@drawable/ic_close_black_24dp"
-        android:tint="@color/colorPrimary"
+        android:tint="@color/colorAccent"
         app:fabSize="mini"
         app:layout_constraintEnd_toStartOf="@+id/guideline52"
         app:layout_constraintTop_toTopOf="@+id/guideline56" />

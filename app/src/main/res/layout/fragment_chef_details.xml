@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <EditText
+        android:id="@+id/cheffirstnameid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="2dp"
+        android:textSize="15sp"
+        android:layout_above="@id/cheflastnameid"
+        android:background="@drawable/edittext_background_white"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:drawablePadding="5dp"
+        android:drawableTint="@color/colorPrimaryDark"
+        android:ellipsize="end"
+        android:ems="3"
+        android:fontFamily="@font/light"
+        android:hint="First Name"
+        android:lines="1"
+        android:paddingHorizontal="25dp"
+        android:shadowColor="@color/colorPrimary"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorgrey"
+        app:layout_constraintBottom_toTopOf="@+id/guideline26"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline25" />
+
+    <EditText
+        android:id="@+id/cheflastnameid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="2dp"
+        android:textSize="15sp"
+        android:background="@drawable/edittext_background_white"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:drawablePadding="5dp"
+        android:drawableTint="@color/colorPrimaryDark"
+        android:ellipsize="end"
+        android:ems="3"
+        android:fontFamily="@font/light"
+        android:hint="Last Name"
+        android:lines="1"
+        android:paddingHorizontal="25dp"
+        android:shadowColor="@color/colorPrimary"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorgrey"
+        app:layout_constraintBottom_toTopOf="@+id/guideline22"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline21"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/chefemailid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="2dp"
+        android:textSize="15sp"
+        android:background="@drawable/edittext_background_white"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:drawablePadding="5dp"
+        android:drawableTint="@color/colorPrimaryDark"
+        android:ellipsize="end"
+        android:ems="3"
+        android:fontFamily="@font/light"
+        android:hint="Email"
+        android:lines="1"
+        android:paddingHorizontal="25dp"
+        android:shadowColor="@color/colorPrimary"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorgrey"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+    <EditText
+        android:id="@+id/chefcnicid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="15sp"
+        android:background="@drawable/edittext_background_white"
+        android:layout_marginVertical="2dp"
+        android:drawableLeft="@drawable/ic_chrome_reader_mode_black_24dp"
+        android:drawablePadding="5dp"
+        android:drawableTint="@color/colorPrimaryDark"
+        android:ellipsize="end"
+        android:ems="3"
+        android:fontFamily="@font/light"
+        android:hint="CNIC Number"
+        android:lines="1"
+        android:paddingHorizontal="25dp"
+        android:shadowColor="@color/colorPrimary"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorgrey"
+        app:layout_constraintBottom_toTopOf="@+id/guideline20"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline18" />
+
+    <Spinner
+        android:id="@+id/chefgenderspinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@id/gendertext"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toEndOf="@+id/gendertext"
+        app:layout_constraintTop_toTopOf="@+id/guideline19" />
+
+    <TextView
+        android:id="@+id/heading1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cheffirstnameid"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="25dp"
+        android:fontFamily="@font/stylish"
+        android:gravity="center"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="Chef Details"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline25"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/gendertext"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_above="@id/chefemailid"
+        android:fontFamily="@font/heavy"
+        android:gravity="center_vertical|left"
+        android:paddingHorizontal="25dp"
+        android:text="Gender"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline19" />
+
+    <TextView
+        android:id="@+id/attatchtextid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chefcnicid"
+        android:layout_alignRight="@+id/chefcnicid"
+        android:fontFamily="@font/heavy"
+        android:gravity="center"
+        android:text="Attach back and front images of your CNIC"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline30"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline29" />
+
+    <TextView
+        android:id="@+id/attachfilenametextid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/chefdetailnextid"
+        android:layout_alignTop="@+id/attachfilebtnid"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/attachfilebtnid"
+        android:fontFamily="@font/medium"
+        android:gravity="top"
+        android:padding="10dp"
+        android:text="No file attached"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline16"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintStart_toEndOf="@+id/attachfilebtnid"
+        app:layout_constraintTop_toTopOf="@+id/guideline24"
+        app:layout_constraintVertical_bias="0.110000014" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.57" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.49" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.58" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.41" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.74" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.26" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.81" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.73" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/attachfilebtnid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/attatchtextid"
+        android:layout_alignLeft="@+id/chefcnicid"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_attach_file_black_24dp"
+        android:tint="@color/colorAccent"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/guideline28"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/chefdetailnextid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline13"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline16" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

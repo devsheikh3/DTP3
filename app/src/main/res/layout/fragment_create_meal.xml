@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.dtp3.CreateMeal">
+
+
+    <Button
+        android:id="@+id/createmealid"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_background_brown"
+        android:text="Create"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline53"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline54" />
+
+    <EditText
+        android:id="@+id/mealpriceid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/edittext_background_white"
+        android:drawableLeft="@drawable/ic_attach_money_black_24dp"
+        android:drawablePadding="5dp"
+        android:ellipsize="end"
+        android:ems="3"
+        android:fontFamily="@font/medium"
+        android:hint="Meal Price"
+        android:lines="1"
+        android:paddingHorizontal="25dp"
+        android:shadowColor="@color/colorPrimary"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorgrey"
+        android:textCursorDrawable="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/guideline46"
+        app:layout_constraintEnd_toStartOf="@+id/guideline52"
+        app:layout_constraintStart_toStartOf="@+id/guideline51"
+        app:layout_constraintTop_toTopOf="@+id/guideline45" />
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/edittext_background_white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline62"
+        app:layout_constraintEnd_toStartOf="@+id/guideline52"
+        app:layout_constraintStart_toStartOf="@+id/guideline51"
+        app:layout_constraintTop_toTopOf="@+id/guideline61">
+
+        <ImageView
+            android:id="@+id/infoicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_info_black_24dp" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/infoicon">
+
+            <EditText
+                android:id="@+id/aboutkitchenid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/kitchenservicehoursid"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/empty_background"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:fontFamily="@font/medium"
+                android:hint="Details"
+                android:paddingHorizontal="5dp"
+                android:shadowColor="@color/colorPrimary"
+                android:shadowDx="10"
+                android:shadowDy="10"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorgrey" />
+        </ScrollView>
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/mealnameid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/createmeal"
+        android:layout_centerHorizontal="true"
+
+        android:background="@drawable/edittext_background_white"
+        android:drawableLeft="@drawable/ic_room_service_black_24dp"
+        android:drawablePadding="5dp"
+        android:ellipsize="end"
+        android:ems="3"
+        android:fontFamily="@font/medium"
+        android:hint="Meal Name"
+        android:lines="1"
+        android:paddingHorizontal="25dp"
+        android:shadowColor="@color/colorPrimary"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorgrey"
+        android:textCursorDrawable="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/guideline49"
+        app:layout_constraintEnd_toStartOf="@+id/guideline52"
+        app:layout_constraintStart_toStartOf="@+id/guideline51"
+        app:layout_constraintTop_toTopOf="@+id/guideline50" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/food"
+        app:layout_constraintBottom_toTopOf="@+id/guideline58"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline52"
+        app:layout_constraintStart_toStartOf="@+id/guideline51"
+        app:layout_constraintTop_toBottomOf="@+id/createmeal" />
+
+
+    <Spinner
+        android:id="@+id/chefgenderspinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_toRightOf="@id/gendertext"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline48"
+        app:layout_constraintEnd_toStartOf="@+id/guideline52"
+        app:layout_constraintStart_toEndOf="@+id/gendertext"
+        app:layout_constraintTop_toTopOf="@+id/guideline47" />
+
+
+    <TextView
+        android:id="@+id/gendertext"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/heavy"
+        android:gravity="center_vertical|left"
+        android:paddingHorizontal="25dp"
+        android:text="Meal Type"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline48"
+        app:layout_constraintStart_toStartOf="@+id/guideline51"
+        app:layout_constraintTop_toTopOf="@+id/guideline47" />
+
+
+    <TextView
+        android:id="@+id/availabletext"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/heavy"
+        android:gravity="center_vertical|left"
+        android:paddingHorizontal="25dp"
+        android:text="Availability"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline60"
+        app:layout_constraintStart_toStartOf="@+id/guideline51"
+        app:layout_constraintTop_toTopOf="@+id/guideline59" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline60"
+        app:layout_constraintEnd_toStartOf="@+id/guideline52"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/availabletext"
+        app:layout_constraintTop_toTopOf="@+id/guideline59" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="@+id/guideline51"
+        tools:layout_editor_absoluteY="42dp" />
+
+    <TextView
+        android:id="@+id/createmeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+
+        android:fontFamily="@font/stylish"
+        android:text="Create Meal"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline52"
+        app:layout_constraintStart_toStartOf="@+id/guideline51"
+        app:layout_constraintTop_toTopOf="@+id/guideline56" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.56" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.58" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.64" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.48" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05109489" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02872777" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.74" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_camera_alt_black_24dp"
+        android:tint="@color/colorPrimary"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/guideline58"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/closecreatemealid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_close_black_24dp"
+        android:tint="@color/colorPrimary"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toStartOf="@+id/guideline52"
+        app:layout_constraintTop_toTopOf="@+id/guideline56" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

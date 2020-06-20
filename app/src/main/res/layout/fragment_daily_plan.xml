@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DailyPlan">
+
+
+    <TextView
+        android:id="@+id/textViewwwww"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:fontFamily="@font/stylish"
+        android:padding="5dp"
+        android:gravity="center"
+        android:text="Monday"
+        android:textColor="@color/colorAccent"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.ogaclejapan.smarttablayout.SmartTabLayout
+        android:id="@+id/dailymealtab"
+        android:layout_below="@+id/textViewwwww"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/tab_back"
+        android:elevation="4dp"
+        app:stl_clickable="true"
+        app:stl_defaultTabBackground="?attr/selectableItemBackground"
+        app:stl_defaultTabTextAllCaps="false"
+        app:stl_defaultTabTextColor="@color/colorAccent"
+        app:stl_defaultTabTextHorizontalPadding="16dp"
+        app:stl_defaultTabTextSize="15sp"
+        app:stl_distributeEvenly="true"
+        app:stl_drawDecorationAfterTab="false"
+        app:stl_indicatorAlwaysInCenter="false"
+        app:stl_indicatorColor="#4D000000"
+        app:stl_indicatorCornerRadius="35dp"
+        app:stl_indicatorGravity="center"
+        app:stl_indicatorInFront="false"
+        app:stl_indicatorInterpolation="smart"
+        app:stl_indicatorThickness="38dp"
+        app:stl_indicatorWidth="auto"
+        app:stl_indicatorWithoutPadding="true"
+        app:stl_titleOffset="auto_center"
+        app:stl_underlineThickness="0dp" />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_below="@+id/dailymealtab"
+        android:id="@+id/dailymealtabpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addbreakfastid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_black_24dp"
+        android:tint="@color/colorPrimary"
+        app:fabSize="normal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="10dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/active"
+        android:icon="@drawable/ic_restaurant_menu_black_24dp"
+        android:title="Active"/>
+
+    <item
+        android:id="@+id/meals"
+        android:icon="@drawable/ic_room_service_black_24dp"
+        android:title="Meals"/>
+
+    <item
+        android:id="@+id/weekly"
+        android:icon="@drawable/ic_date_range_black_24dp"
+        android:title="Weekly"/>
+
+    <item
+        android:id="@+id/orders"
+        android:icon="@drawable/ic_turned_in_not_black_24dp"
+        android:title="Orders"/>
+
+    <item
+        android:id="@+id/payments"
+        android:icon="@drawable/ic_monetization_on_black_24dp"
+        android:title="Payments"/>
+
+
+
+</menu>

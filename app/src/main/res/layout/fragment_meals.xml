@@ -12,17 +12,4 @@
         android:id="@+id/allmealslistid"/>
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/createmealbtnid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorAccent"
-        android:tint="@color/colorPrimary"
-        android:src="@drawable/ic_add_black_24dp"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="10dp"
-        android:layout_centerHorizontal="true"
-        />
-
-
 </RelativeLayout>

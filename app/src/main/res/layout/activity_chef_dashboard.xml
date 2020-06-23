@@ -17,6 +17,7 @@
         app:itemIconTint="@color/nav_color"
         app:itemTextColor="@color/nav_color"
         android:elevation="16dp"
+        android:visibility="invisible"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -61,8 +62,24 @@
         android:id="@+id/cheffragid"
         android:layout_marginHorizontal="15dp"
         android:layout_below="@+id/shopdpid"
-        android:layout_above="@+id/chefnavigationid"
         />
+
+    <com.luseen.spacenavigation.SpaceNavigationView
+        android:elevation="5dp"
+        android:id="@+id/space"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+        android:background="@drawable/navigation_background"
+        app:active_item_color="@color/colorPrimaryDark"
+        app:centre_button_color="@color/colorAccent"
+        app:inactive_item_color="@color/colorAccent"
+        app:space_background_color="@color/colorPrimary"
+        app:centre_button_icon="@drawable/ic_add_black_24dp"
+        app:space_item_icon_size="@dimen/space_item_icon_default_size"
+        app:space_item_text_size="@dimen/space_item_text_default_size" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -70,18 +87,5 @@
         android:layout_below="@+id/shopdpid"
         android:id="@+id/notififragid"
         />
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/kitchennestfragid"
-        />
-
-
-
-
-
-
-
 
 </RelativeLayout>

@@ -16,7 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Meals extends Fragment {
 
-    FloatingActionButton createmeal;
+
     RecyclerView allmealslist;
 
     @Override
@@ -24,16 +24,7 @@ public class Meals extends Fragment {
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_meals, container, false);
 
-        createmeal=(FloatingActionButton)view.findViewById(R.id.createmealbtnid);
         allmealslist=(RecyclerView)view.findViewById(R.id.allmealslistid);
-        createmeal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent= new Intent(getContext(),NextActivity.class);
-                startActivity(intent);
-            }
-        });
 
         allmealslist.setLayoutManager(new LinearLayoutManager(getContext()));
         String[] name={"Biryani","Karahi","Sandwich","Mutton","Qoufty"};

@@ -30,7 +30,7 @@ public class Breakfast extends Fragment {
         int[] image={R.drawable.food};
         Boolean[] availability={true};
 
-        breakfastlist.setAdapter(new ActiveMealAdapter(name,price,type,image,availability));
+        breakfastlist.setAdapter(new AllMealsAdapter(name,price,type,image,availability))  ;
 
 
 

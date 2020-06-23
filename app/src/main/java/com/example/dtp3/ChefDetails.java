@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -36,10 +38,30 @@ public class ChefDetails extends Fragment {
          filenames=(TextView)view.findViewById(R.id.attachfilenametextid);
          chefgenderdropdown =(Spinner) view.findViewById(R.id.chefgenderspinner);
 
-         String[] items = new String[]{"Male", "Female", "Other"};
+
+         String[] items = new String[]{"Select Gender","Male", "Female", "Other"};
          ArrayAdapter<String>adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item,items);
          adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
          chefgenderdropdown.setAdapter(adapter);
+         chefgenderdropdown.setVisibility(View.VISIBLE);
+         chefgenderdropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+             @Override
+             public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
+
+                if( parent.getItemAtPosition(i).equals("Select Gender")){
+
+                }
+                else {
+
+                }
+
+             }
+
+             @Override
+             public void onNothingSelected(AdapterView<?> adapterView) {
+
+             }
+         });
 
 
          nextbtnchef.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +73,13 @@ public class ChefDetails extends Fragment {
              }
          });
 
+         attachFile.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+
+
+             }
+         });
 
         return view;
     }

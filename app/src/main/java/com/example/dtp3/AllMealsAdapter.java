@@ -70,6 +70,7 @@ public class AllMealsAdapter extends RecyclerView.Adapter<AllMealsAdapter.AllMea
        else{
 
             holder.circle.setImageResource(R.drawable.rounded_grey);
+
        }
     }
 
@@ -83,7 +84,7 @@ public class AllMealsAdapter extends RecyclerView.Adapter<AllMealsAdapter.AllMea
         TextView name,price,type;
         Switch availability;
         ImageView image,circle;
-        FloatingActionButton editmeal;
+        FloatingActionButton editmeal, addweekly, delete;
 
         public AllMealsViewHlder(@NonNull View itemView) {
             super(itemView);

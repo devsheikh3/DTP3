@@ -1,5 +1,6 @@
 package com.example.dtp3;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -29,9 +30,8 @@ public class Meals extends Fragment {
             @Override
             public void onClick(View view) {
 
-
-
-
+                Intent intent= new Intent(getContext(),NextActivity.class);
+                startActivity(intent);
             }
         });
 

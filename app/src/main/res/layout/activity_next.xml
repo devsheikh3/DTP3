@@ -7,6 +7,7 @@
     tools:context=".NextActivity">
 
     <com.google.android.material.circularreveal.CircularRevealFrameLayout
+        android:id="@+id/nextfragid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

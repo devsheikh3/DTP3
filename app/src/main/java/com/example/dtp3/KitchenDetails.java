@@ -62,7 +62,7 @@ public class KitchenDetails extends Fragment {
            @Override
            public void onClick(View view) {
 
-               Intent intent= new Intent(getContext(),NextActivity.class);
+               Intent intent= new Intent(getContext(),ChefDashboard.class);
                startActivity(intent);
 
            }

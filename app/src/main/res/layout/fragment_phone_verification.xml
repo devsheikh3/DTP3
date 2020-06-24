@@ -8,6 +8,18 @@
     tools:context=".PhoneVerification">
 
     <TextView
+        android:id="@+id/skipphoneverificationid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/heavy"
+        android:text="Skip"
+        android:textSize="18sp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/guideline107" />
+
+
+    <TextView
         android:id="@+id/heading1"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -44,17 +56,14 @@
         android:id="@+id/phonenumberid"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginVertical="2dp"
         android:layout_centerInParent="true"
-        android:layout_marginHorizontal="25dp"
+        android:layout_marginVertical="2dp"
         android:background="@drawable/edittext_background_white"
         android:drawableLeft="@drawable/ic_phone_iphone_black_24dp"
         android:drawablePadding="5dp"
-        android:textCursorDrawable="@color/colorPrimary"
         android:drawableTint="@color/colorPrimaryDark"
         android:ellipsize="end"
         android:ems="3"
-        android:textSize="15sp"
         android:fontFamily="@font/light"
         android:hint="Mobile Number"
         android:inputType="phone"
@@ -65,6 +74,8 @@
         android:shadowDy="10"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@color/colorgrey"
+        android:textCursorDrawable="@color/colorPrimary"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
@@ -158,6 +169,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.61" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline107"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.023640662" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 import android.view.LayoutInflater;
@@ -12,8 +14,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.michaldrabik.classicmaterialtimepicker.CmtpTimeDialogFragment;
+import com.michaldrabik.classicmaterialtimepicker.OnTime12PickedListener;
+import com.michaldrabik.classicmaterialtimepicker.model.CmtpTime12;
 
 
 public class KitchenDetails extends Fragment {
@@ -21,7 +27,8 @@ public class KitchenDetails extends Fragment {
     CircleImageView kitchenimage;
     FloatingActionButton uploadKitchenImage;
     ImageView locationbutton;
-    EditText kitchenName, kitchenlocation, kitchenservicehours, kitchenabout;
+    TextView starttime, endtime, backKitchen;
+    EditText kitchenName, kitchenlocation, kitchenabout;
     Button signupkitchen;
 
 
@@ -35,8 +42,19 @@ public class KitchenDetails extends Fragment {
        signupkitchen=(Button)view.findViewById(R.id.signupkitchenid);
        kitchenName=(EditText)view.findViewById(R.id.kitchennameid);
        kitchenlocation=(EditText)view.findViewById(R.id.kitchenlocationid);
-       kitchenservicehours=(EditText)view.findViewById(R.id.kitchenservicehoursid);
+       starttime=view.findViewById(R.id.kitchenservicehourstartid);
+       endtime=view.findViewById(R.id.kitchenservicehourendid);
        kitchenabout=(EditText)view.findViewById(R.id.aboutkitchenid);
+       backKitchen=view.findViewById(R.id.backkitchendetailsid);
+
+       backKitchen.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+
+               getFragmentManager().beginTransaction().replace(R.id.signinsignupfragid,new ChefDetails()).commit();
+
+           }
+       });
 
 
 
@@ -67,6 +85,45 @@ public class KitchenDetails extends Fragment {
 
            }
        });
+
+       starttime.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+
+                CmtpTimeDialogFragment timePicker = CmtpTimeDialogFragment.newInstance("Set","Cancel");
+               timePicker.show(getFragmentManager(), "time");
+               timePicker.setInitialTime12(12,0, CmtpTime12.PmAm.AM);
+               timePicker.setOnTime12PickedListener(new OnTime12PickedListener() {
+                   @Override
+                   public void onTimePicked(CmtpTime12 cmtpTime12) {
+
+                       starttime.setText(cmtpTime12.toString());
+
+                   }
+               });
+
+           }
+       });
+
+        endtime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                CmtpTimeDialogFragment timePicker = CmtpTimeDialogFragment.newInstance();
+                timePicker.show(getFragmentManager(), "time");
+                timePicker.setInitialTime12(12,0, CmtpTime12.PmAm.AM);
+                timePicker.setOnTime12PickedListener(new OnTime12PickedListener() {
+                    @Override
+                    public void onTimePicked(CmtpTime12 cmtpTime12) {
+
+                        endtime.setText(cmtpTime12.toString());
+
+                    }
+                });
+
+
+            }
+        });
 
 
 

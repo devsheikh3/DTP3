@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -21,8 +22,9 @@ public class ChefDetails extends Fragment {
 
     EditText cheffirstname, cheflastname, chefemail, chefCNIC;
     Spinner chefgenderdropdown;
-    FloatingActionButton nextbtnchef, attachFile ;
-    TextView filenames;
+    FloatingActionButton  attachFile ;
+    Button nextbtnchef;
+    TextView filenames,backchef;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,7 +36,8 @@ public class ChefDetails extends Fragment {
         chefemail=(EditText)view.findViewById(R.id.chefemailid);
         chefCNIC=(EditText)view.findViewById(R.id.chefcnicid);
         attachFile=(FloatingActionButton)view.findViewById(R.id.attachfilebtnid);
-         nextbtnchef=(FloatingActionButton)view.findViewById(R.id.chefdetailnextid);
+        backchef=view.findViewById(R.id.backchefdetailsid);
+         nextbtnchef=view.findViewById(R.id.chefdetailnextid);
          filenames=(TextView)view.findViewById(R.id.attachfilenametextid);
          chefgenderdropdown =(Spinner) view.findViewById(R.id.chefgenderspinner);
 
@@ -77,6 +80,15 @@ public class ChefDetails extends Fragment {
              @Override
              public void onClick(View view) {
 
+
+             }
+         });
+
+         backchef.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+
+                 getFragmentManager().beginTransaction().replace(R.id.signinsignupfragid,new AskRole()).commit();
 
              }
          });

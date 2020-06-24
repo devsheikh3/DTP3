@@ -15,7 +15,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class PinVerification extends Fragment {
 
-    TextView phonetext, codedigit1, codedigit2, codedigit3, codedigit4, pintime;
+    TextView phonetext, codedigit1, codedigit2, codedigit3, codedigit4, pintime, backverificationcode;
     FloatingActionButton resendPin;
 
 
@@ -30,25 +30,29 @@ public class PinVerification extends Fragment {
         codedigit1=(TextView)view.findViewById(R.id.otpid3);
         codedigit1=(TextView)view.findViewById(R.id.otpid4);
         pintime=(TextView)view.findViewById(R.id.pintimertextid);
+        backverificationcode=view.findViewById(R.id.backpinverificationid);
         resendPin=(FloatingActionButton)view.findViewById(R.id.pinresendbtnid);
 
         resendPin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                getFragmentManager().beginTransaction().replace(R.id.signinsignupfragid,new AskRole()).commit();
 
             }
         });
 
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
 
-                getFragmentManager().beginTransaction().replace(R.id.signinsignupfragid,new AskRole()).commit();
+
+
+        backverificationcode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                getFragmentManager().beginTransaction().replace(R.id.signinsignupfragid,new PhoneVerification()).commit();
 
             }
-        }, 4000);
+        });
 
 
 

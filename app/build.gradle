@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.dtp3"
-        minSdkVersion 14
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -42,6 +42,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.0-alpha02'
     implementation 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
     implementation 'com.github.armcha:SpaceNavigationView:1.6.0'
+    implementation 'com.github.michaldrabik:classicmaterialtimepicker:1.1.0'
 
 
 }

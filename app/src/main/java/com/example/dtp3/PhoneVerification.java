@@ -11,12 +11,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class PhoneVerification extends Fragment {
 
     Button verifybtn;
     EditText phonenumber;
+    TextView skipphoneverification;
 
 
 
@@ -28,6 +30,7 @@ public class PhoneVerification extends Fragment {
         View view=inflater.inflate(R.layout.fragment_phone_verification, container, false);
 
         verifybtn=(Button)view.findViewById(R.id.verifynuberid);
+        skipphoneverification=view.findViewById(R.id.skipphoneverificationid);
         phonenumber=(EditText)view.findViewById(R.id. phonenumberid);
 
         verifybtn.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +39,15 @@ public class PhoneVerification extends Fragment {
 
                 getFragmentManager().beginTransaction().replace(R.id.signinsignupfragid,new PinVerification()).commit();
 
+            }
+        });
+
+        skipphoneverification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent= new Intent(getContext(),ChefDashboard.class);
+                startActivity(intent);
             }
         });
 

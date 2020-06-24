@@ -9,11 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class AskRole extends Fragment {
 
     Button asmonster, aschef;
+    TextView changenumber;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -22,6 +24,17 @@ public class AskRole extends Fragment {
 
         asmonster=(Button)view.findViewById(R.id.continuemonsterid);
         aschef=(Button)view.findViewById(R.id.continuechefid);
+        changenumber=view.findViewById(R.id.changenumberid);
+
+        changenumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                getFragmentManager().beginTransaction().replace(R.id.signinsignupfragid,new PhoneVerification()).commit();
+
+
+            }
+        });
 
         asmonster.setOnClickListener(new View.OnClickListener() {
             @Override

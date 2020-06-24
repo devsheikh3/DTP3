@@ -7,6 +7,21 @@
     android:background="@color/colorPrimary"
     tools:context=".PinVerification">
 
+
+    <TextView
+        android:id="@+id/backpinverificationid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
+        android:fontFamily="@font/heavy"
+        android:gravity="top"
+        android:text="Back"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline113"
+        app:layout_constraintTop_toTopOf="@+id/guideline108" />
+
+
     <LinearLayout
         android:id="@+id/otpid"
         android:layout_width="wrap_content"
@@ -29,8 +44,8 @@
             android:inputType="number"
             android:maxLength="1"
             android:padding="2dp"
-            android:textSize="15sp"
             android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <EditText
@@ -38,7 +53,6 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_margin="2dp"
-            android:textSize="15sp"
             android:background="@drawable/edittext_background_white"
             android:focusable="true"
             android:fontFamily="@font/medium"
@@ -47,6 +61,7 @@
             android:maxLength="1"
             android:padding="2dp"
             android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <EditText
@@ -56,13 +71,13 @@
             android:layout_margin="2dp"
             android:background="@drawable/edittext_background_white"
             android:focusable="true"
-            android:textSize="15sp"
             android:fontFamily="@font/medium"
             android:gravity="center"
             android:inputType="number"
             android:maxLength="1"
             android:padding="2dp"
             android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <EditText
@@ -73,12 +88,12 @@
             android:background="@drawable/edittext_background_white"
             android:focusable="true"
             android:fontFamily="@font/medium"
-            android:textSize="15sp"
             android:gravity="center"
             android:inputType="number"
             android:maxLength="1"
             android:padding="2dp"
             android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
 
@@ -102,7 +117,7 @@
             android:fontFamily="@font/medium"
             android:gravity="center"
             android:text="Resend Pin"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -144,7 +159,7 @@
         android:gravity="center"
         android:paddingHorizontal="25dp"
         android:text="Please enter the 4 digit code that we have sent on"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
         app:layout_constraintEnd_toEndOf="parent"
@@ -159,7 +174,7 @@
         android:layout_above="@+id/otpid"
         android:fontFamily="@font/heavy"
         android:text="+923456789100"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
         app:layout_constraintEnd_toStartOf="@+id/guideline15"
@@ -295,5 +310,26 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.61" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline108"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.023640662" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline109"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline113"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05109489" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

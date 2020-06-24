@@ -6,13 +6,26 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
+    <TextView
+        android:id="@+id/backchefdetailsid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_arrow_back_black_24dp"
+        android:fontFamily="@font/heavy"
+        android:gravity="top"
+        android:text="Back"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline110" />
+
+
     <EditText
         android:id="@+id/cheffirstnameid"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginVertical="2dp"
-        android:textSize="15sp"
         android:layout_above="@id/cheflastnameid"
+        android:layout_marginVertical="2dp"
         android:background="@drawable/edittext_background_white"
         android:drawableLeft="@drawable/ic_person_black_24dp"
         android:drawablePadding="5dp"
@@ -28,6 +41,7 @@
         android:shadowDy="10"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@color/colorgrey"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
@@ -38,7 +52,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginVertical="2dp"
-        android:textSize="15sp"
         android:background="@drawable/edittext_background_white"
         android:drawableLeft="@drawable/ic_person_black_24dp"
         android:drawablePadding="5dp"
@@ -54,6 +67,7 @@
         android:shadowDy="10"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@color/colorgrey"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline22"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
@@ -65,7 +79,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginVertical="2dp"
-        android:textSize="15sp"
         android:background="@drawable/edittext_background_white"
         android:drawableLeft="@drawable/ic_email_black_24dp"
         android:drawablePadding="5dp"
@@ -81,6 +94,7 @@
         android:shadowDy="10"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@color/colorgrey"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
@@ -90,9 +104,8 @@
         android:id="@+id/chefcnicid"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:textSize="15sp"
-        android:background="@drawable/edittext_background_white"
         android:layout_marginVertical="2dp"
+        android:background="@drawable/edittext_background_white"
         android:drawableLeft="@drawable/ic_chrome_reader_mode_black_24dp"
         android:drawablePadding="5dp"
         android:drawableTint="@color/colorPrimaryDark"
@@ -107,6 +120,7 @@
         android:shadowDy="10"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@color/colorgrey"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline20"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
@@ -140,20 +154,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/cheffirstnameid"
-        android:layout_centerHorizontal="true"
         android:layout_margin="25dp"
         android:fontFamily="@font/stylish"
         android:gravity="center"
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="5"
-        android:text="Chef Details"
+        android:text="Sign Up Details"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline25"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guideline110" />
 
 
     <TextView
@@ -161,6 +174,8 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_above="@id/chefemailid"
+        android:drawableLeft="@drawable/ic_wc_black_24dp"
+        android:drawablePadding="5dp"
         android:fontFamily="@font/light"
         android:gravity="center_vertical|left"
         android:paddingHorizontal="25dp"
@@ -227,14 +242,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.05" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.95" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline13"
@@ -255,7 +270,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.92" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline17"
@@ -355,18 +370,39 @@
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline24" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <Button
         android:id="@+id/chefdetailnextid"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
-        android:tint="@color/colorAccent"
+        android:layout_height="0dp"
+        android:background="@drawable/button_background_brown"
+        android:text="Next"
+        android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/guideline13"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@+id/guideline12"
-        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintEnd_toStartOf="@+id/guideline112"
+        app:layout_constraintStart_toStartOf="@+id/guideline111"
         app:layout_constraintTop_toTopOf="@+id/guideline16" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline110"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline111"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.39" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline112"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.61" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

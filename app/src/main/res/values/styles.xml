@@ -12,4 +12,45 @@
         <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
     </style>
 
+    <style name="CmtpDialogPositiveButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">
+            @drawable/button_green
+        </item>
+
+        <item name="android:height">25dp</item>
+
+        <item name="android:textColor">
+            @color/colorAccent</item>
+
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="CmtpDialogNegativeButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">
+            @drawable/button_dull
+        </item>
+
+        <item name="android:height">25dp</item>
+
+        <item name="android:textColor">
+            @color/colorAccent</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+
+    <style name="CmtpViewTheme">
+        <item name="cmtpTextFrameDrawable">@drawable/custom_text_frame</item>
+        <item name="cmtpTextColor">@color/colorPrimaryDark</item>
+        <item name="cmtpTextSize">20sp</item>
+        <item name="fontFamily">@font/medium</item>
+    </style>
+
+    <style name="CmtpDialogFrameStyle" parent="CmtpDialogTheme">
+        <item name="android:windowBackground">@drawable/roundedwhite</item>
+    </style>
+
 </resources>

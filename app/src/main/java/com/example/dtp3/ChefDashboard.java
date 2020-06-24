@@ -54,6 +54,7 @@ public class ChefDashboard extends AppCompatActivity {
             @Override
             public void onItemClick(int itemIndex, String itemName) {
 
+
                 Fragment selectedFragment=null;
 
                 switch(itemIndex){
@@ -78,6 +79,8 @@ public class ChefDashboard extends AppCompatActivity {
 
             @Override
             public void onItemReselected(int itemIndex, String itemName) {
+
+
 
             }
         });

@@ -76,9 +76,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/kitchenservicehoursid"
-                android:drawablePadding="5dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/empty_background"
+                android:drawablePadding="5dp"
                 android:drawableTint="@color/colorPrimaryDark"
                 android:fontFamily="@font/medium"
                 android:hint="Details"
@@ -90,11 +90,11 @@
                 android:textColorHint="@color/colorgrey" />
         </ScrollView>
     </RelativeLayout>
+
     <EditText
         android:id="@+id/mealnameid"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_below="@+id/createmeal"
         android:layout_centerHorizontal="true"
         android:layout_marginVertical="2dp"
         android:background="@drawable/edittext_background_white"
@@ -112,23 +112,46 @@
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@color/colorgrey"
         android:textCursorDrawable="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toTopOf="@+id/guideline49"
+        app:layout_constraintBottom_toTopOf="@+id/guideline58"
         app:layout_constraintEnd_toStartOf="@+id/guideline52"
         app:layout_constraintStart_toStartOf="@+id/guideline51"
-        app:layout_constraintTop_toTopOf="@+id/guideline50" />
+        app:layout_constraintTop_toTopOf="@+id/guideline72" />
 
-    <ImageView
+    <AutoCompleteTextView
+        android:id="@+id/cattv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:completionThreshold="1"
+        android:hint="Select Category"
+        android:layout_marginVertical="2dp"
+        android:paddingHorizontal="25dp"
+        android:drawableLeft="@drawable/ic_restaurant_black_24dp"
+        android:drawablePadding="5dp"
+        android:ellipsize="end"
+        android:ems="3"
+        android:lines="1"
+        android:background="@drawable/edittext_background_white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline49"
+        app:layout_constraintEnd_toStartOf="@+id/guideline52"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline51"
+        app:layout_constraintTop_toTopOf="@+id/guideline50"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:elevation="5dp"
         android:scaleType="centerCrop"
         android:src="@drawable/food"
-        app:layout_constraintBottom_toTopOf="@+id/guideline58"
+        app:civ_border_color="@color/colorPrimaryDark"
+        app:civ_border_width="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline91"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toStartOf="@+id/guideline52"
         app:layout_constraintStart_toStartOf="@+id/guideline51"
-        app:layout_constraintTop_toBottomOf="@+id/createmeal" />
+        app:layout_constraintTop_toBottomOf="@+id/closecreatemealid" />
 
     <View
         android:layout_width="0dp"
@@ -157,6 +180,8 @@
         android:id="@+id/gendertext"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:drawableLeft="@drawable/ic_brightness_4_black_24dp"
+        android:drawablePadding="5dp"
         android:fontFamily="@font/light"
         android:gravity="center_vertical|left"
         android:paddingHorizontal="25dp"
@@ -192,19 +217,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/availabletext"
         app:layout_constraintTop_toTopOf="@+id/guideline59" />
-
-    <TextView
-        android:id="@+id/createmeal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/stylish"
-        android:text="Create Meal"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline52"
-        app:layout_constraintStart_toStartOf="@+id/guideline51"
-        app:layout_constraintTop_toTopOf="@+id/guideline56" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline45"
@@ -325,11 +337,9 @@
         android:backgroundTint="@color/colorPrimaryDark"
         android:src="@drawable/ic_camera_alt_black_24dp"
         android:tint="@color/colorAccent"
-        app:fabSize="auto"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline58"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2" />
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/closecreatemealid"
@@ -342,6 +352,20 @@
         app:fabSize="mini"
         app:layout_constraintEnd_toStartOf="@+id/guideline52"
         app:layout_constraintTop_toTopOf="@+id/guideline56" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline91"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

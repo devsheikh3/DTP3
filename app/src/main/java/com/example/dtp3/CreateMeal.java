@@ -14,10 +14,13 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -33,6 +36,7 @@ public class CreateMeal extends Fragment {
     Spinner mealtype;
     EditText mealname, mealprice, mealdetails;
     Switch availability;
+    RelativeLayout beta;
 
 
     @Override
@@ -44,6 +48,7 @@ public class CreateMeal extends Fragment {
         mealprice=view.findViewById(R.id.mealpriceid);
         mealdetails=view.findViewById(R.id.mealdetailid);
         availability=view.findViewById(R.id.mealavailableid);
+        beta=view.findViewById(R.id.mealdetaillayoutid);
         mealtype=view.findViewById(R.id.mealtypespinner);
         create=view.findViewById(R.id.createmealbtnid);
         closecreatemeal=(FloatingActionButton) view.findViewById(R.id.closecreatemealid);
@@ -73,6 +78,17 @@ public class CreateMeal extends Fragment {
 
             }
         });
+
+        beta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                mealdetails.requestFocus();
+
+            }
+        });
+
+
 
 
         String[] items = new String[]{"Select Type","Breakfast", "Lunch", "Dinner"};

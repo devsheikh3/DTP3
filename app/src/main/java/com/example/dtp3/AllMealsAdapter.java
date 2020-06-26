@@ -1,8 +1,11 @@
 package com.example.dtp3;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -10,6 +13,8 @@ import android.widget.TextView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class AllMealsAdapter extends RecyclerView.Adapter<AllMealsAdapter.AllMealsViewHlder> {
@@ -38,9 +43,9 @@ public class AllMealsAdapter extends RecyclerView.Adapter<AllMealsAdapter.AllMea
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AllMealsViewHlder holder, int position) {
+    public void onBindViewHolder(@NonNull final AllMealsViewHlder holder, int position) {
 
-        String name=mealname[position];
+        final String name=mealname[position];
         holder.name.setText(name);
         String type=mealtype[position];
         holder.type.setText(type);
@@ -64,14 +69,62 @@ public class AllMealsAdapter extends RecyclerView.Adapter<AllMealsAdapter.AllMea
         if (holder.availability.isChecked()){
 
             holder.circle.setImageResource(R.drawable.rounded_yellow);
-
         }
-
-       else{
+        else{
 
             holder.circle.setImageResource(R.drawable.rounded_grey);
+        }
 
-       }
+        holder.availability.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if (b==true){
+
+                   holder.circle.setImageResource(R.drawable.rounded_yellow);
+
+                }
+
+                else{
+
+                    holder.circle.setImageResource(R.drawable.rounded_grey);
+
+                }
+
+
+
+            }
+        });
+
+
+       holder.circle.setOnClickListener(new View.OnClickListener() {
+           private Context context;
+           @Override
+           public void onClick(View view) {
+               context=view.getContext();
+                Intent intent=new Intent(context,NextActivity.class);
+                intent.putExtra("i",4);
+                context.startActivity(intent);
+               //((AppCompatActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.cheffullfragid,new MealDetails()).commit();
+
+           }
+       });
+
+       holder.mealback.setOnClickListener(new View.OnClickListener() {
+           private  Context context;
+           @Override
+           public void onClick(View view) {
+               context=view.getContext();
+               Intent intent=new Intent(context,NextActivity.class);
+               intent.putExtra("i",4);
+               context.startActivity(intent);
+              // ((AppCompatActivity)context).getSupportFragmentManager().beginTransaction().replace(R.id.cheffullfragid,new MealDetails()).commit();
+
+           }
+       });
+
+
     }
 
     @Override
@@ -85,6 +138,7 @@ public class AllMealsAdapter extends RecyclerView.Adapter<AllMealsAdapter.AllMea
         Switch availability;
         ImageView image,circle;
         FloatingActionButton editmeal, addweekly, delete;
+        ConstraintLayout mealback;
 
         public AllMealsViewHlder(@NonNull View itemView) {
             super(itemView);
@@ -96,7 +150,9 @@ public class AllMealsAdapter extends RecyclerView.Adapter<AllMealsAdapter.AllMea
             image=(ImageView)itemView.findViewById(R.id.allmealimageid);
             circle=(ImageView)itemView.findViewById(R.id.circleid);
             editmeal=(FloatingActionButton)itemView.findViewById(R.id.allmealeditid);
-
+            addweekly=(FloatingActionButton)itemView.findViewById(R.id.allmealweekid);
+            delete=(FloatingActionButton)itemView.findViewById(R.id.allmealdeleteid);
+            mealback=itemView.findViewById(R.id.mealbackid);
 
         }
     }

@@ -9,6 +9,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mealbackid"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -52,7 +53,7 @@
             android:fontFamily="@font/stylish"
             android:gravity="bottom"
             android:text="Meal Name"
-            android:textColor="@color/colortext"
+            android:textColor="@color/colordarktext"
             android:textSize="25sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline65"
             app:layout_constraintEnd_toStartOf="@+id/allmealeditid"
@@ -66,7 +67,7 @@
             android:fontFamily="@font/heavy"
             android:gravity="center_vertical"
             android:text="Breakfast"
-            android:textColor="@color/colortext"
+            android:textColor="@color/colordarktext"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline66"
             app:layout_constraintEnd_toStartOf="@+id/guideline64"
@@ -81,7 +82,7 @@
             android:fontFamily="@font/heavy"
             android:gravity="top"
             android:text="Rs/-150"
-            android:textColor="@color/colortext"
+            android:textColor="@color/colordarktext"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline57"
             app:layout_constraintEnd_toStartOf="@+id/guideline64"

@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -30,6 +32,8 @@ public class KitchenDetails extends Fragment {
     TextView starttime, endtime, backKitchen;
     EditText kitchenName, kitchenlocation, kitchenabout;
     Button signupkitchen;
+    RelativeLayout alpha;
+
 
 
     @Override
@@ -46,6 +50,7 @@ public class KitchenDetails extends Fragment {
        endtime=view.findViewById(R.id.kitchenservicehourendid);
        kitchenabout=(EditText)view.findViewById(R.id.aboutkitchenid);
        backKitchen=view.findViewById(R.id.backkitchendetailsid);
+       alpha=view.findViewById(R.id.kitchenabooutlayoutid);
 
        backKitchen.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -124,6 +129,17 @@ public class KitchenDetails extends Fragment {
 
             }
         });
+
+
+        alpha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                kitchenabout.requestFocus();
+
+            }
+        });
+
 
 
 

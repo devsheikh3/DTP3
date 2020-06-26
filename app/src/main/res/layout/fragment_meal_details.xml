@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorgrey"
+    tools:context=".MealDetails">
+
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/guideline118"
+        app:layout_constraintStart_toStartOf="@+id/guideline117"
+        app:layout_constraintTop_toTopOf="@+id/guideline114">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/closemealdetailsid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:src="@drawable/ic_close_black_24dp"
+                android:layout_alignParentRight="true"
+                app:fabSize="mini"
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mealdetailimageid"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="5dp"
+                android:src="@drawable/food"
+                app:civ_border_color="@color/colordarktext"
+                app:civ_border_width="5dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mealdetailimageid"
+                android:background="@drawable/roundedwhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+
+                <TextView
+                    android:id="@+id/mealdetailnameid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/heavy"
+                    android:gravity="center"
+                    android:text="Corresponding meal name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <RelativeLayout
+                    android:id="@id/pricetxtid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mealdetailnameid"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/priceidtxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/heavy"
+                        android:text="Price: "
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/mealdetailpriceid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_toRightOf="@+id/priceidtxt"
+                        android:fontFamily="@font/medium"
+                        android:gravity="right"
+                        android:text="Rs/-200"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/categorytxtid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pricetxtid"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/categoryidtxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/heavy"
+                        android:text="Category: "
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/mealdetailcategoryid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_toRightOf="@+id/categoryidtxt"
+                        android:fontFamily="@font/medium"
+                        android:gravity="right"
+                        android:text="Fast food"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/timetxtid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/categorytxtid"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/timeidtxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/heavy"
+                        android:text="Available at: "
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/mealtimecategoryid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_toRightOf="@+id/timeidtxt"
+                        android:fontFamily="@font/medium"
+                        android:gravity="right"
+                        android:text="Lunch"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/posttimetxtid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timetxtid"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/posttimeidtxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/heavy"
+                        android:text="Posted:"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/mealposttimeid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_toRightOf="@+id/posttimeidtxt"
+                        android:fontFamily="@font/medium"
+                        android:gravity="right"
+                        android:text="2 hrs ago"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/mealdetailextadetailstxtid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/posttimetxtid"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/heavy"
+                    android:gravity="center"
+                    android:text="Extra Details"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/extramealdetailsid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mealdetailextadetailstxtid"
+                    android:layout_marginHorizontal="25dp"
+                    android:fontFamily="@font/medium"
+                    android:gravity="center"
+                    android:text="No exctra details are available"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/kitchendteialstxtid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/extramealdetailsid"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="25dp"
+                    android:fontFamily="@font/heavy"
+                    android:gravity="center"
+                    android:text="Kitchen Details"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/mealdetailskitchendpid"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/kitchendteialstxtid"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/smpleimage" />
+
+                <TextView
+                    android:id="@+id/mealdetailkkitchennameid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mealdetailskitchendpid"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/heavy"
+                    android:gravity="center"
+                    android:text="Corresponding Kitchen name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colortext"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RatingBar
+                    android:id="@+id/mealdetailratingid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mealdetailkkitchennameid"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressTint="@color/colorPrimary"
+                    android:rating="2.5"
+                    android:stepSize="0.5" />
+
+                <TextView
+                    android:id="@+id/mealdetailreviewtxtid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mealdetailratingid"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/heavy"
+                    android:gravity="center"
+                    android:text="Reviews"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colortext"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mealdetailreviewid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mealdetailreviewtxtid"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/heavy"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colortext"
+                    android:textSize="25sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mealdetailordercompletedid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mealdetailreviewid"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="10dp"
+                    android:drawableBottom="@drawable/ic_check_circle_black_24dp"
+                    android:fontFamily="@font/heavy"
+                    android:gravity="center"
+                    android:text="Orders completed"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colortext"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/mealdetailorderid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mealdetailordercompletedid"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/heavy"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colortext"
+                    android:textSize="25sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/mealdetailvisitkitchenid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mealdetailorderid"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="15dp"
+                    android:backgroundTint="@color/colorgrey"
+                    android:background="@drawable/rounded_grey"
+                    android:fontFamily="@font/heavy"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Visit Profile"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline117"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05109489" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline118"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline122"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline114"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.023640662" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

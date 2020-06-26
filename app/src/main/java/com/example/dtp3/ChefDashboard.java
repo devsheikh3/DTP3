@@ -24,8 +24,10 @@ import com.luseen.spacenavigation.SpaceOnClickListener;
 
 public class ChefDashboard extends AppCompatActivity {
 
-    BottomNavigationView chefnavigation;
+    //BottomNavigationView chefnavigation;
     FloatingActionButton cheffnotificationbtn;
+    boolean flag = false;
+    FragmentTransaction fTrans;
 
 
     @Override
@@ -86,18 +88,32 @@ public class ChefDashboard extends AppCompatActivity {
         });
 
         cheffnotificationbtn=(FloatingActionButton) findViewById(R.id.notificationbtnid);
-        chefnavigation=(BottomNavigationView)findViewById(R.id.chefnavigationid);
-        chefnavigation.setOnNavigationItemSelectedListener(navListener);
+        //chefnavigation=(BottomNavigationView)findViewById(R.id.chefnavigationid);
+        //chefnavigation.setOnNavigationItemSelectedListener(navListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.cheffragid,new Meals()).commit();
 
 
         cheffnotificationbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                fTrans = getSupportFragmentManager().beginTransaction();
+                if(flag) {
+                    fTrans.remove(getSupportFragmentManager().findFragmentById(R.id.cheffragid));
+                    spaceNavigationView.setVisibility(View.VISIBLE);
+                } else {
+                    fTrans.add(R.id.cheffragid, new Notification());
+                    spaceNavigationView.setVisibility(View.GONE);
+                }
+                flag = !flag;
+                fTrans.commit();
 
-                Intent intent= new Intent(ChefDashboard.this,NextActivity.class);
-                intent.putExtra("i",3);
-                startActivity(intent);
+
+                //Intent intent= new Intent(ChefDashboard.this,NextActivity.class);
+                //intent.putExtra("next",3);
+                //startActivity(intent);
+               // getSupportFragmentManager().beginTransaction().replace(R.id.cheffragid,new Notification()).commit();
+
+
 
             }
         });
@@ -106,10 +122,9 @@ public class ChefDashboard extends AppCompatActivity {
 
 
 
-
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener= new BottomNavigationView.OnNavigationItemSelectedListener() {
+   /* private BottomNavigationView.OnNavigationItemSelectedListener navListener= new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
             Fragment selectedFragment=null;
@@ -136,7 +151,7 @@ public class ChefDashboard extends AppCompatActivity {
 
             return true;
         }
-    };
+    };*/
 
 
     }

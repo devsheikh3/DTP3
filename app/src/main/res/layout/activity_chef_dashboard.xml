@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/colorgrey"
     tools:context=".ChefDashboard">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -18,6 +18,13 @@
         app:itemTextColor="@color/nav_color"
         android:elevation="16dp"
         android:visibility="invisible"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:layout_above="@+id/cheffragid"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -81,11 +88,6 @@
         app:space_item_icon_size="@dimen/space_item_icon_default_size"
         app:space_item_text_size="@dimen/space_item_text_default_size" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/shopdpid"
-        android:id="@+id/notififragid"
-        />
+
 
 </RelativeLayout>

@@ -17,12 +17,15 @@ int i;
         setContentView(R.layout.activity_next);
       this.i=getIntent().getIntExtra("i",0);
 
-if(i==2) {
-    getSupportFragmentManager().beginTransaction().replace(R.id.nextfragid, new CreateMeal()).commit();
-}
-else if(i==3){
-    getSupportFragmentManager().beginTransaction().replace(R.id.nextfragid, new Notification()).commit();
-}
+      if(i==2) {
+          getSupportFragmentManager().beginTransaction().replace(R.id.nextfragid, new CreateMeal()).commit();
+      }
+      else if(i==3){
+          getSupportFragmentManager().beginTransaction().replace(R.id.nextfragid, new Notification()).commit();
+      }
+      else if(i==4){
+          getSupportFragmentManager().beginTransaction().replace(R.id.nextfragid, new MealDetails()).commit();
+      }
 
 
     }
